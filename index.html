@@ -13,6 +13,7 @@
     --chocolate-soft: #3E2A1C;
     --cream: #F4EDE1;
     --cream-warm: #EFE4D2;
+    --surface-warm: #EFE4D2;
     --green: #3D5A45;
     --green-deep: #2A3F30;
     --gold: #C9A24B;
@@ -26,7 +27,7 @@
   @media (prefers-color-scheme: dark){
     :root:not([data-theme="light"]){
       --page-bg: #1B130D;
-      --cream-warm: #241A12;
+      --surface-warm: #241A12;
       --card-bg: #241A12;
       --text-on-cream: #EFE4D2;
       --text-muted: #B6A48F;
@@ -35,7 +36,7 @@
   }
   :root[data-theme="dark"]{
     --page-bg: #1B130D;
-    --cream-warm: #241A12;
+    --surface-warm: #241A12;
     --card-bg: #241A12;
     --text-on-cream: #EFE4D2;
     --text-muted: #B6A48F;
@@ -156,7 +157,7 @@
   /* ---------- ABOUT ---------- */
   .about{
     padding:96px 0 88px;
-    background:var(--cream-warm);
+    background:var(--surface-warm);
   }
   .about-grid{
     display:grid; grid-template-columns: 0.9fr 1.1fr; gap:64px; align-items:center;
@@ -214,8 +215,10 @@
     color:var(--green);
     margin-bottom:6px;
   }
-  :root[data-theme="dark"] .menu-cat h3,
-  @media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .menu-cat h3{ color:#8FB89C; } }
+  :root[data-theme="dark"] .menu-cat h3{ color:#8FB89C; }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]) .menu-cat h3{ color:#8FB89C; }
+  }
   .menu-cat .cat-sub{
     font-size:0.85rem; color:var(--text-muted); margin-bottom:22px; font-style:italic;
   }
